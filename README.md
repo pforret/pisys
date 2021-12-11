@@ -5,7 +5,9 @@ Speed :  697.95
 Chip  :  BCM2835
 Serial:  00000000539c9951
 Model :  Raspberry Pi Model B Rev 2
-RAM   : 439972kB
+RAM   : 439 MB
+SD Size: 14G
+SD Free: 11G
  
 # SOFTWARE
 OS:             Linux version 5.10.63+

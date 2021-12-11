@@ -23,8 +23,10 @@ echo "# HARDWARE"
   /Model/    {print "Model : " $2}
 '
 < /proc/meminfo gawk -F: '
-  /MemTotal/ {gsub(" ","",$2); print "RAM   : " $2}
+  /MemTotal/ {gsub(" ","",$2); print "RAM   : " int($2/1000) " MB"}
 '
+df -h / \
+| gawk ' /dev/ {print "SD Size: " $2;print "SD Free: " $4;}'
 echo " "
 echo "# SOFTWARE"
 < /proc/version gawk '{print "OS:            " , $1 , $2 , $3}'
